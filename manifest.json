@@ -93,14 +93,14 @@
       "routes": [
         {
           "pattern": "",
-          "name": "main",
-          "target": "main"
+          "name": "View",
+          "target": "View"
         }
       ],
       "targets": {
-        "main": {
-          "viewId": "main",
-          "viewName": "Main"
+        "View": {
+          "viewId": "View",
+          "viewName": "View"
         },
         "notFound": {
           "viewId": "notFound",
