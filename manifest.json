@@ -84,6 +84,7 @@
         "viewPath": "com.portfolio.demo.view",
         "controlId": "app",
         "controlAggregation": "pages",
+        "clearControlAggregation": false,
         "transition": "slide",
         "bypassed": {
           "target": "notFound"
@@ -100,7 +101,10 @@
       "targets": {
         "View": {
           "viewId": "View",
-          "viewName": "View"
+          "viewName": "View",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewType": "XML"
         },
         "notFound": {
           "viewId": "notFound",
