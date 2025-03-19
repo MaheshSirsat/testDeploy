@@ -7,7 +7,7 @@
     xmlns:card="sap.f.cards"
     height="100%"
     >
- <Page id="page" showHeader="true" backgroundDesign="Solid" class="sapUiContentPadding">
+ <Page id="View" showHeader="true" backgroundDesign="Solid" class="sapUiContentPadding">
         <customHeader>
             <Bar>
                 <contentMiddle>
