@@ -82,7 +82,7 @@
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
         "viewPath": "com.portfolio.demo.view",
-        "controlId": "container",
+        "controlId": "app",
         "controlAggregation": "pages",
         "clearControlAggregation": false,
         "transition": "slide",
