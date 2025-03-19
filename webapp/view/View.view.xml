@@ -1,0 +1,161 @@
+<mvc:View controllerName="com.portfolio.demo.controller.View"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" 
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.f"
+    xmlns:card="sap.f.cards"
+    height="100%"
+    >
+ <Page id="mainPage" showHeader="true" backgroundDesign="Solid" class="sapUiContentPadding">
+        <customHeader>
+            <Bar>
+                <contentMiddle>
+                    <Title text="My Portfolio" />
+                </contentMiddle>
+                <contentRight>
+                    <Button icon="sap-icon://menu" press="onMenuPress" />
+                </contentRight>
+            </Bar>
+        </customHeader>
+        
+        <content>
+            <l:VerticalLayout width="100%" class="sapUiContentPadding">
+                <!-- Profile Section -->
+                <f:Card class="sapUiMediumMarginBottom">
+                    <f:header>
+                        <card:Header
+                            title="{portfolio>/personalInfo/name}"
+                            subtitle="{portfolio>/personalInfo/title}"
+                            iconSrc="sap-icon://person-placeholder" />
+                    </f:header>
+                    <f:content>
+                        <VBox class="sapUiSmallMargin">
+                            <HBox class="sapUiSmallMarginBottom">
+                                <VBox class="sapUiSmallMarginEnd">
+                                    <Label text="Email:" class="sapUiTinyMarginBottom" />
+                                    <Text text="{portfolio>/personalInfo/email}" />
+                                </VBox>
+                                <VBox class="sapUiSmallMarginEnd">
+                                    <Label text="Phone:" class="sapUiTinyMarginBottom" />
+                                    <Text text="{portfolio>/personalInfo/phone}" />
+                                </VBox>
+                                <VBox>
+                                    <Label text="Location:" class="sapUiTinyMarginBottom" />
+                                    <Text text="{portfolio>/personalInfo/location}" />
+                                </VBox>
+                            </HBox>
+                            <Label text="About:" class="sapUiTinyMarginBottom" />
+                            <Text text="{portfolio>/personalInfo/about}" />
+                        </VBox>
+                    </f:content>
+                </f:Card>
+                
+                <!-- Skills Section -->
+                <f:Card class="sapUiMediumMarginBottom">
+                    <f:header>
+                        <card:Header
+                            title="Skills"
+                            iconSrc="sap-icon://technical-object" />
+                    </f:header>
+                    <f:content>
+                        <List
+                            items="{portfolio>/skills}">
+                            <CustomListItem>
+                                <HBox class="sapUiSmallMargin" justifyContent="SpaceBetween" alignItems="Center">
+                                    <Label text="{portfolio>name}" class="sapUiTinyMarginEnd" />
+                                    <ProgressIndicator
+                                        percentValue="{portfolio>level}"
+                                        displayValue="{portfolio>level}%"
+                                        state="Success"
+                                        class="sapUiSmallMarginBegin"
+                                        width="70%" />
+                                </HBox>
+                            </CustomListItem>
+                        </List>
+                    </f:content>
+                </f:Card>
+                
+                <!-- Experience Section -->
+                <f:Card class="sapUiMediumMarginBottom">
+                    <f:header>
+                        <card:Header
+                            title="Experience"
+                            iconSrc="sap-icon://work-history" />
+                    </f:header>
+                    <f:content>
+                        <List
+                            items="{portfolio>/experience}">
+                            <CustomListItem>
+                                <VBox class="sapUiSmallMargin">
+                                    <HBox justifyContent="SpaceBetween">
+                                        <Title text="{portfolio>position}" level="H4" />
+                                        <Text text="{portfolio>period}" />
+                                    </HBox>
+                                    <Text text="{portfolio>company}" class="sapUiTinyMarginBottom" />
+                                    <Text text="{portfolio>description}" />
+                                </VBox>
+                            </CustomListItem>
+                        </List>
+                    </f:content>
+                </f:Card>
+                
+                <!-- Projects Section -->
+                <f:Card class="sapUiMediumMarginBottom">
+                    <f:header>
+                        <card:Header
+                            title="Projects"
+                            iconSrc="sap-icon://project-definition-triangle" />
+                    </f:header>
+                    <f:content>
+                        <List
+                            items="{portfolio>/projects}">
+                            <CustomListItem>
+                                <VBox class="sapUiSmallMargin">
+                                    <Title text="{portfolio>name}" level="H4" class="sapUiTinyMarginBottom" />
+                                    <Text text="{portfolio>description}" class="sapUiTinyMarginBottom" />
+                                    <HBox>
+                                        <Label text="Technologies:" class="sapUiTinyMarginEnd" />
+                                        <Text text="{portfolio>technologies}" />
+                                    </HBox>
+                                </VBox>
+                            </CustomListItem>
+                        </List>
+                    </f:content>
+                </f:Card>
+                
+                <!-- Education Section -->
+                <f:Card>
+                    <f:header>
+                        <card:Header
+                            title="Education"
+                            iconSrc="sap-icon://education" />
+                    </f:header>
+                    <f:content>
+                        <List
+                            items="{portfolio>/education}">
+                            <CustomListItem>
+                                <VBox class="sapUiSmallMargin">
+                                    <Title text="{portfolio>degree}" level="H4" class="sapUiTinyMarginBottom" />
+                                    <HBox justifyContent="SpaceBetween">
+                                        <Text text="{portfolio>institution}" />
+                                        <Text text="{portfolio>year}" />
+                                    </HBox>
+                                </VBox>
+                            </CustomListItem>
+                        </List>
+                    </f:content>
+                </f:Card>
+            </l:VerticalLayout>
+        </content>
+        
+        <footer>
+            <Bar>
+                <contentMiddle>
+                    <Text text="© 2025 - My Portfolio" />
+                </contentMiddle>
+            </Bar>
+        </footer>
+    </Page>
+</mvc:View>

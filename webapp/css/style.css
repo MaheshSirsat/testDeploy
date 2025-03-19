@@ -1,0 +1,24 @@
+/* Custom styles for the portfolio application */
+.sapMPageHeader::before {
+    border-top: 0.25rem solid #0854a0;
+}
+
+.sapUiContentPadding {
+    padding: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .sapUiContentPadding {
+        padding: 0.5rem;
+    }
+}
+
+/* Card styling */
+.sapFCard {
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.sapFCard .sapFCardHeader {
+    background-color: #f5f5f5;
+}
