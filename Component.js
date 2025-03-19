@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/UIComponent","sap/ui/Device","com/portfolio/demo/model/models"],function(e,o,t){"use strict";return e.extend("com.portfolio.demo.Component",{metadata:{manifest:"json"},init:function(){e.prototype.init.apply(this,arguments);this.getRouter().initialize();this.setModel(t.createDeviceModel(),"device");this.setModel(t.createPortfolioModel(),"portfolio")}})});
+//# sourceMappingURL=Component.js.map
