@@ -2,7 +2,7 @@ name: Deploy Fiori Application
 
 on:
   push:
-    branches: [ main, master ]  # Works with either main or master branch
+    branches: [ main, master,gh-pages ]  # Works with either main or master branch
   workflow_dispatch:
 
 jobs:

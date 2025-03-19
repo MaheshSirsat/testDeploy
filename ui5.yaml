@@ -1,5 +1,4 @@
 # yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
-
 specVersion: "3.1"
 metadata:
   name: com.portfolio.demo
@@ -29,3 +28,12 @@ server:
       configuration:
         component: com.portfolio.demo
         ui5Theme: sap_horizon
+---
+# Task extension configuration
+specVersion: "3.1"
+kind: extension
+type: task
+metadata:
+  name: ui5-task-zipper
+task:
+  path: node_modules/ui5-task-zipper/lib/index.js
