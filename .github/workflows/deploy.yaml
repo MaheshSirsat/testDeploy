@@ -32,4 +32,4 @@ jobs:
         folder: dist
         branch: gh-pages
         repository-name: MaheshSirsat/testDeploy  # Change this to your actual repository name
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
