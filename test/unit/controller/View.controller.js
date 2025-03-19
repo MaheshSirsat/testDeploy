@@ -1,0 +1,2 @@
+sap.ui.define(["comportfolio/demo/controller/View.controller"],function(o){"use strict";QUnit.module("View Controller");QUnit.test("I should test the View controller",function(t){var e=new o;e.onInit();t.ok(e)})});
+//# sourceMappingURL=View.controller.js.map
