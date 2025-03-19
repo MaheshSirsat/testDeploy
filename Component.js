@@ -1,2 +1,34 @@
-sap.ui.define(["sap/ui/core/UIComponent","sap/ui/Device","com/portfolio/demo/model/models"],function(e,o,t){"use strict";return e.extend("com.portfolio.demo.Component",{metadata:{manifest:"json"},init:function(){e.prototype.init.apply(this,arguments);this.getRouter().initialize();this.setModel(t.createDeviceModel(),"device");this.setModel(t.createPortfolioModel(),"portfolio")}})});
-//# sourceMappingURL=Component.js.map
+sap.ui.define([
+    "sap/ui/core/UIComponent",
+    "sap/ui/Device",
+    "com/portfolio/demo/model/models"
+], function (UIComponent, Device, models) {
+    "use strict";
+
+    return UIComponent.extend("com.portfolio.demo.Component", {
+        metadata: {
+            manifest: "json"
+        },
+
+        init: function () {
+            // Call the init function of the parent
+            UIComponent.prototype.init.apply(this, arguments);
+
+            // Initialize Router
+            this.getRouter().initialize();
+
+            // Set Models
+            this.setModel(models.createDeviceModel(), "device");
+            this.setModel(models.createPortfolioModel(), "portfolio");
+        },
+
+        createContent: function () {
+            // Load and return App.view.xml to ensure the App control is available
+            return sap.ui.view({
+                viewName: "com.portfolio.demo.view.App",
+                type: "XML",
+                id: "app"
+            });
+        }
+    });
+});
