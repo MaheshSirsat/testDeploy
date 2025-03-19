@@ -2,7 +2,7 @@ name: Deploy Fiori Application
 
 on:
   push:
-    branches: [ main, master ]  # Works with either main or master branch
+    branches: [ main, master,gh-pages ]  # Works with either main or master branch
   workflow_dispatch:
 
 jobs:
@@ -30,6 +30,6 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: dist
-        branch: gh-pages
+        branch: main
         repository-name: MaheshSirsat/testDeploy  # Change this to your actual repository name
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}

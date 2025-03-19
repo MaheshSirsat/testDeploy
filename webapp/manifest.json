@@ -50,7 +50,7 @@
   "sap.ui5": {
     "flexEnabled": false,
     "dependencies": {
-      "minUI5Version": "1.96.0",
+      "minUI5Version": "1.113.0",
       "libs": {
         "sap.m": {},
         "sap.ui.core": {},
@@ -85,27 +85,34 @@
         "controlId": "app",
         "controlAggregation": "pages",
         "transition": "slide",
-        "bypassed": {
-          "target": "notFound"
-        },
+        
         "async": true
       },
       "routes": [
         {
           "pattern": "",
-          "name": "main",
-          "target": "main"
+          "name": "View",
+          "target": ["View"]
         }
       ],
       "targets": {
-        "main": {
-          "viewId": "main",
-          "viewName": "Main"
+        "View": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "View",
+          "viewName": "View"
         },
         "notFound": {
           "viewId": "notFound",
           "viewName": "NotFound"
         }
+      },
+       "rootView": {
+        "viewName": "com.portfolio.demo.view.App",
+        "type": "XML",
+        "async": true,
+        "id": "App"
       }
     }
   }
